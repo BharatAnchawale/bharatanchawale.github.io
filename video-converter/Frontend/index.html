@@ -1,8 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>This is Video Converter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Converter</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    Hi
+    <div class="container">
+        <h1>Upload a Video</h1>
+
+        <form id="uploadForm">
+            <input type="file" id="videoInput" name="file" accept="video/*" required />
+            <button type="submit">Upload</button>
+        </form>
+
+        <div id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+            <p id="progressStatus">Preparing...</p>
+        </div>
+
+        <div id="status"></div>
+
+        <div id="downloadSection" style="display: none;">
+            <h2>Download Encrypted Video</h2>
+            <a id="downloadLink" href="#" target="_blank">Download Video</a>
+        </div>
+
+        <button id="toggleLogBtn" onclick="toggleLog()">Hide Log</button>
+        <div id="logWindow" class="log-window"></div>
+
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

@@ -3,10 +3,10 @@ from minio.error import S3Error
 import os
 
 # Load these from your .env.production file ideally
-MINIO_ENDPOINT = "localhost:9000"  # Change if MinIO is remote
+MINIO_ENDPOINT = "141.148.205.10:9000"  # Change if MinIO is remote
 MINIO_ACCESS_KEY = "minioadmin"
-MINIO_SECRET_KEY = "minioadmin"
-MINIO_BUCKET = "videos"
+MINIO_SECRET_KEY = "minioadmin123"
+MINIO_BUCKET = "video-converter"
 
 # Initialize the MinIO client
 minio_client = Minio(
